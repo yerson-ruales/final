@@ -122,7 +122,7 @@ if (isset($_GET['edit'])) {
         }
         $query = mysqli_query($connect, $sql);
 
-        mysqli_query($connect, "update log set quien='". $username."', que='Actualizo el producto '". $productname);
+        mysqli_query($connect, "INSERT INTO `test`.`log` (`quien`, `que`) VALUES ('".$username."', 'actualizo el produycto ".$productname."');");
         // sleep(2);
         if ($query) {
             echo '<div class="alert alert-success alert-dismissible fade show">

@@ -94,8 +94,8 @@ while ($cat = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
         $query = mysqli_query($con, $sql);
 
-        
-        mysqli_query($con, " update log set quien='". $username."', que='inserto el producto '".$productname."'");
+         
+        mysqli_query($con, "INSERT INTO `test`.`log` (`quien`, `que`) VALUES ('".$username."', 'añadio el producto ".$productname."');");
 
         if ($query) {
             echo '<div class="alert alert-success alert-dismissible fade show">

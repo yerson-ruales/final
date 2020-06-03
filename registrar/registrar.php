@@ -33,7 +33,7 @@
             
             $query=mysqli_query($con,$sql);
             
-            mysqli_query($con, " update log set quien='". $username."', que='Se registro en el sistema'");
+            mysqli_query($con, "INSERT INTO `test`.`log` (`quien`, `que`) VALUES ('".$username."', 'se registra el usuario');");
             if($query){
             echo '<div class="alert alert-success alert-dismissible fade show">
             Usuario <strong> Registrado </strong> exitosamente. <a href="../ "> Ir a login </a>

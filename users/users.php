@@ -59,7 +59,7 @@
 
         $query = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
-        mysqli_query($con, " update log set quien='". $username."', que='Actualizo la contraseña '");
+        mysqli_query($con, " INSERT INTO `test`.`log` (`quien`, `que`) VALUES ('".$username."', 'actualizo la contraseña');");
 
         if($row){
 
