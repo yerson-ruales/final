@@ -36,6 +36,7 @@
             
             <a href="../products/products.php" class="nav-item nav-link">Mis productos</a>
             
+                <a href="../products/anadir.php" class="nav-item nav-link">Anadir productos</a>
             <a href="../users/users.php" class="nav-item nav-link">Opciones de usuario</a>
         </div>
         <div class="navbar-nav ml-auto">

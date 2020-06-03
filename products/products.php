@@ -55,6 +55,7 @@ while ($cat = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
             <div class="navbar-nav">
                 <a href="../publico/publico.php" class="nav-item nav-link active">Publico</a>
                 <a href="../products/products.php" class="nav-item nav-link">Mis productos</a>
+                <a href="../products/anadir.php" class="nav-item nav-link">Anadir productos</a>
                 <a href="../users/users.php" class="nav-item nav-link">Opciones de usuario</a>
                 
             </div>
@@ -94,7 +95,7 @@ while ($cat = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
         $query = mysqli_query($con, $sql);
 
         
-        mysqli_query($con, " update log set quien='". $username."', que='inserto el producto '".$productname);
+        mysqli_query($con, " update log set quien='". $username."', que='inserto el producto '".$productname."'");
 
         if ($query) {
             echo '<div class="alert alert-success alert-dismissible fade show">
@@ -136,57 +137,7 @@ while ($cat = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
     ?>
     <br>
     <div class="container-fluid">
-        <form id="registrar" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
-            <div class="form-group">
-                <label for="inputEmail">nombre del producto</label>
-                <input id="nameofproduct" type="text" name="productname" class="form-control" id="inputEmail" placeholder="nombre del producto" required>
-                <div class="invalid-feedback">Please enter a nombre del producto.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail">precio del producto</label>
-                <input type="text" name="productprice" class="form-control" id="inputEmail" placeholder="precio del producto" required>
-                <div class="invalid-feedback">Please enter a precio del producto.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail">Categoría</label>
-                <select class="form-control" name="categoria">
-
-                    <!-- <H1>TEST</H1> -->
-                    <?php
-
-                    foreach ($categorias as $categoria) {
-
-                    ?>
-
-                        <option value="<?= $categoria["id"] ?>"> <?= $categoria["nombre"] ?></option>
-
-
-                    <?php
-                    }
-
-                    ?>
-                </select>
-
-            </div>
-
-            <div class="form-group">
-                <label for="inputEmail">Descripcion</label>
-                <input type="text" name="productdescripcion" class="form-control" placeholder="Descripcion del producto" value="" required>
-                <div class="invalid-feedback">Por favor, de una descripcion del producto.</div>
-            </div>
-
-
-            <div class="form-group">
-                Image : <input type="file" name="productimage" class="form-control" id="inputEmail" class="btn btn-primary" required> <br />
-                <div class="invalid-feedback">Please choose an Image.</div>
-            </div>
-
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="estado" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Activa si deseas que el producto sea visible</label>
-            </div>
-            <button type="submit" name="insert" class="btn btn-danger btn-block">AÑADIR PRODUCTO</button>
-        </form>
+    
         <br><br>
         <h2 style="width:100%;text-align:center;">Tus productos</h2>
         <br>

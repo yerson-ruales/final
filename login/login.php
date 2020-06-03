@@ -57,8 +57,8 @@
                 <div class="invalid-feedback"> Por favor, digite un correo valido.</div>
             </div>
             <div class="form-group">
-                <label for="inputPassword">Password</label>
-                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Contraseña" required>
                 <div class="invalid-feedback">Por favor, digite una contraseña valida.</div>
             </div>
             <div class="form-group">
