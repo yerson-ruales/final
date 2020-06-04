@@ -1,5 +1,11 @@
-select persona.id, persona.nombre, persona.apellido, persona.celular,
-	CONCAT(persona_usuario.nombre, " ",persona_usuario.apellido) as creado_por
-	from persona
-	inner join usuario on usuario.id = persona.creado_por
-	inner join persona as persona_usuario on usuario.persona_id = persona_usuario.id
+1- SELECT * FROM products INNER JOIN appuser ON appuser.id= products.user_id  AND products.estado='checked' 
+2-Select id,username,email,productname,productprice,productimage,estado,categoria,descripcion from products where id = id
+3-select * from appuser where email=email
+        and password=password
+4-select * from products INNER JOIN appuser ON appuser.id= products.user_id  AND products.estado='checked' WHERE productname="mause"
+5-select * from appuser where email = '" . $ email . "'
+        y contraseña = '" . $ contraseña . "'
+6-select * from products where user_id = '" . $ _SESSION [ 'id' ]. "'
+7-select * from categorias
+8-elect * from products INNER JOIN appuser ON appuser.id = products.user_id AND products.estado = 'marcado' donde productname = '" . $ searchtext . "'
+9-select * from appuser where email = '" . $ email . "
